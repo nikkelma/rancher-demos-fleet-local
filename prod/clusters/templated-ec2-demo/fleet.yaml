@@ -1,0 +1,24 @@
+helm:
+  repo: https://raw.githubusercontent.com/nikkelma/rancher-demos-charts/main/
+  chart: ec2-demo-static
+  version: 0.1.1
+  releaseName: templated-ec2-a
+  values:
+    cloudCredential: cattle-global-data:cc-kxbpq
+    fullnameOverride: ''
+    kubernetesVersion: v1.21.4+rke2r2
+    nameOverride: ''
+    nodepoolControlplane:
+      ami: ami-dee008af
+      instanceType: t3a.large
+      name: nikkelma-ec2-ct-a-cp
+      quantity: 3
+      region: us-gov-east-1
+      vpcId: vpc-5415f83d
+    nodepoolWorker:
+      ami: ami-dee008af
+      instanceType: t3a.xlarge
+      name: nikkelma-ec2-ct-a-w
+      quantity: 2
+      region: us-gov-east-1
+      vpcId: vpc-5415f83d
