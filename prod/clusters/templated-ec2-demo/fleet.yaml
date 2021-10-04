@@ -1,12 +1,12 @@
 helm:
   repo: https://raw.githubusercontent.com/nikkelma/rancher-demos-charts/main/
   chart: ec2-demo-static
-  version: 0.1.1
+  version: 0.1.2
   releaseName: templated-ec2-a
   values:
     cloudCredential: cattle-global-data:cc-kxbpq
     fullnameOverride: ''
-    kubernetesVersion: v1.21.4+rke2r2
+    kubernetesVersion: v1.21.4+rke2r3
     nameOverride: ''
     nodepoolControlplane:
       ami: ami-dee008af
